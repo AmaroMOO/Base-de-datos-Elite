@@ -1,3 +1,6 @@
+DROP database elite;
+create database elite;
+use elite;
 CREATE TABLE Temporadas (
     temporada_id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -5,16 +8,14 @@ CREATE TABLE Temporadas (
     numero_episodios INT,
     descripcion TEXT
 );
-
 insert into Temporadas (temporada_id, nombre, fecha_estreno, numero_episodios, descripcion) values
-("1", "Temporada 1", "05/10/2018", "8", "Cuando tres jóvenes de clase obrera se matriculan en un exclusivo instituto privado, las diferencias entre ellos y los alumnos ricos darán lugar a un asesinato"),
-("2", "Temporada 2", "06/09/2019", "8", " trata sobre la desaparición de un alumno del colegio y la tercera se centra en un nuevo asesinato entre los estudiantes"),
-("3", "Temporada 3", "13/03/2020", "8", "En la tercera temporada de Elite, las tensiones aumentan en Las Encinas con la llegada de nuevos estudiantes, mientras que los secretos del pasado amenazan con salir a la luz y desencadenar consecuencias devastadoras para todos los involucrados"),
-("4", "Temporada 4", "18/06/2021", "8","'La cuarta temporada de Elite presenta un nuevo misterio en Las Encinas con la llegada de un nuevo director y un grupo de estudiantes que desafían el orden establecido. Con más secretos, traiciones y tensiones que nunca, los estudiantes se enfrentarán a dilemas morales y personales que pondrán a prueba sus lealtades y cambiarán el curso de sus vidas para siempre"),
-("5", "Temporada 5", "08/04/2022", "8","La quinta temporada de Elite sigue a los estudiantes de Las Encinas mientras enfrentan nuevos desafíos y secretos que amenazan con desestabilizar sus vidas. Con la llegada de nuevos personajes y la revelación de oscuros secretos, los estudiantes se verán obligados a confrontar sus propios demonios mientras luchan por mantenerse a flote en un entorno lleno de intrigas, romance y traición"),
-("6", "Temporada 6", "18/11/2022", "8","La sexta temporada de Elite sigue a los estudiantes de Las Encinas mientras se enfrentan a nuevos desafíos y dilemas en un ambiente cada vez más tenso. Con la llegada de nuevos personajes y la revelación de oscuros secretos del pasado, los estudiantes se ven envueltos en una red de mentiras, traiciones y conspiraciones que pondrán a prueba su lealtad y los llevarán al límite"),
-("7", "Temporada 7", "20/10/2023", "8","En la séptima temporada de Elite, los estudiantes de Las Encinas enfrentan un nuevo conjunto de desafíos mientras luchan por mantener el equilibrio entre sus estudios, sus relaciones personales y los secretos que los rodean. Con la llegada de nuevos personajes y la continuación de las tensiones existentes, esta temporada promete intrigas, romance y giros inesperados que mantendrán a los espectadores al borde de sus asientos"),
-("8", "Temporada 8", "2024", "8","'La octava temporada de Elite continúa explorando las complejas vidas de los estudiantes de Las Encinas, quienes se ven envueltos en una nueva serie de intrigas, secretos y conflictos personales. Con la incorporación de nuevos personajes y el desarrollo de las tramas existentes, esta temporada promete mantener a los espectadores al borde de sus asientos con giros emocionantes y revelaciones impactantes");
+("1", "Temporada 1", "2018-10-05", "8", "Cuando tres jóvenes de clase obrera se matriculan en un exclusivo instituto privado, las diferencias entre ellos y los alumnos ricos darán lugar a un asesinato"),
+("2", "Temporada 2", "2019-09-06", "8", " trata sobre la desaparición de un alumno del colegio y la tercera se centra en un nuevo asesinato entre los estudiantes"),
+("3", "Temporada 3", "2020-03-13", "8", "En la tercera temporada de Elite, las tensiones aumentan en Las Encinas con la llegada de nuevos estudiantes, mientras que los secretos del pasado amenazan con salir a la luz y desencadenar consecuencias devastadoras para todos los involucrados"),
+("4", "Temporada 4", "2021-06-18", "8","'La cuarta temporada de Elite presenta un nuevo misterio en Las Encinas con la llegada de un nuevo director y un grupo de estudiantes que desafían el orden establecido. Con más secretos, traiciones y tensiones que nunca, los estudiantes se enfrentarán a dilemas morales y personales que pondrán a prueba sus lealtades y cambiarán el curso de sus vidas para siempre"),
+("5", "Temporada 5", "2022-04-08", "8","La quinta temporada de Elite sigue a los estudiantes de Las Encinas mientras enfrentan nuevos desafíos y secretos que amenazan con desestabilizar sus vidas. Con la llegada de nuevos personajes y la revelación de oscuros secretos, los estudiantes se verán obligados a confrontar sus propios demonios mientras luchan por mantenerse a flote en un entorno lleno de intrigas, romance y traición"),
+("6", "Temporada 6", "2022-11-18", "8","La sexta temporada de Elite sigue a los estudiantes de Las Encinas mientras se enfrentan a nuevos desafíos y dilemas en un ambiente cada vez más tenso. Con la llegada de nuevos personajes y la revelación de oscuros secretos del pasado, los estudiantes se ven envueltos en una red de mentiras, traiciones y conspiraciones que pondrán a prueba su lealtad y los llevarán al límite"),
+("7", "Temporada 7", "2023-10-20", "8","En la séptima temporada de Elite, los estudiantes de Las Encinas enfrentan un nuevo conjunto de desafíos mientras luchan por mantener el equilibrio entre sus estudios, sus relaciones personales y los secretos que los rodean. Con la llegada de nuevos personajes y la continuación de las tensiones existentes, esta temporada promete intrigas, romance y giros inesperados que mantendrán a los espectadores al borde de sus asientos");
 
 CREATE TABLE Personajes (
     personaje_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,52 +25,50 @@ CREATE TABLE Personajes (
 );
 
 insert into Personajes (personaje_id, nombre, temporada_aparicion) values
-("1", "Marina Nunier", "1"),
-("2", "Samuel Garcia", "1"),
-("3", "Guzman Nunier", "1"),
-("4", "Christian Varela", "1"),
-("5", "Nano Gracia", "1"),
-("6", "Polo Benavent", "1"),
-("7", "Ander Muñoz", "1"),
-("8", "Nadia Shanaa", "1"),
-("9", "Carla Roson", "1"),
-("10", "Omar Shanaa ", "1"),
-("11", "Lucrecia Montesinos", "1"),
-("12", "Valerio Montesinos", "2"),
-("13", "Rebeka Parrilla", "2"),
-("14", "Cayetana Grajera", "2"),
-("15", "Malick Diallo", "3"),
-("16", "Yeray Engonga", "3"),
-("17", "Ariadna Blanco", "4"),
-("18", "Mencia Blanco", "4"),
-("19", "Patrick Blanco", "4"),
-("20", "Phillipe Von Triesenberg", "4"),
-("21", "Armando de la Ossa", "4"),
-("22", "Benjamin Blanco", "4"),
-("23", "Isidora Artiñan", "5"),
-("24", "Ivan Cruz", "5"),
-("25", "Cruz Carvalho", "5"),
-("26", "Bilal", "5"),
-("27", "Sara", "5"),
-("28", "Raul", "6"),
-("29", "Didac Ramos", "6"),
-("30", "Nicolas Fernandez", "6"),
-("31", "Hugo Muller", "6"),
-("32", "Javier", "6"),
-("33", "Alex Diaz", "6"),
-("34", "Rocio Owono", "6"),
-("35", "Sonia", "6"),
-("36", "Joel", "7"),
-("37", "Chloe Silva", "7"),
-("38", "Eric de Velasco", "7"),
-("39", "Luis Marin", "7"),
-("40", "Dalmar", "7"),
-("41", "Carmen Silva", "7"),
-("42", "Jessica", "7"),
-("43", "Fikile Bhele", "7"),
-("44", "Martin Artiñan", "7"),
-("45", "Emilia", "8"),
-("46", "Hector", "8");
+(1, "Marina Nunier", 1),
+(2, "Samuel Garcia", 1),
+(3, "Guzman Nunier", 1),
+(4, "Christian Varela", 1),
+(5, "Nano Gracia", 1),
+(6, "Polo Benavent", 1),
+(7, "Ander Muñoz", 1),
+(8, "Nadia Shanaa", 1),
+(9, "Carla Roson", 1),
+(10, "Omar Shanaa ", 1),
+(11, "Lucrecia Montesinos", 1),
+(12, "Valerio Montesinos", 2),
+(13, "Rebeka Parrilla", 2),
+(14, "Cayetana Grajera", 2),
+(15, "Malick Diallo", 3),
+(16, "Yeray Engonga", 3),
+(17, "Ariadna Blanco", 4),
+(18, "Mencia Blanco", 4),
+(19, "Patrick Blanco", 4),
+(20, "Phillipe Von Triesenberg", 4),
+(21, "Armando de la Ossa", 4),
+(22, "Benjamin Blanco", 4),
+(23, "Isidora Artiñan", 5),
+(24, "Ivan Cruz", 5),
+(25, "Cruz Carvalho", 5),
+(26, "Bilal", 5),
+(27, "Sara", 5),
+(28, "Raul", 6),
+(29, "Didac Ramos", 6),
+(30, "Nicolas Fernandez", 6),
+(31, "Hugo Muller", 6),
+(32, "Javier", 6),
+(33, "Alex Diaz", 6),
+(34, "Rocio Owono", 6),
+(35, "Sonia", 6),
+(36, "Joel", 7),
+(37, "Chloe Silva", 7),
+(38, "Eric de Velasco", 7),
+(39, "Luis Marin", 7),
+(40, "Dalmar", 7),
+(41, "Carmen Silva", 7),
+(42, "Jessica", 7),
+(43, "Fikile Bhele", 7),
+(44, "Martin Artiñan", 7);
 
 CREATE TABLE Actores (
     actor_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -135,7 +134,7 @@ CREATE TABLE Premios_Nominaciones (
   Resultado VARCHAR(50)
 );
 
-insert into PremiosNominaciones (Año,FestivalPremios,Categoria,Nominado,Resultado) values
+insert into Premios_Nominaciones (Año,FestivalPremios,Categoria,Nominado,Resultado) values
 ("2018", 'Festival CiBRA', 'Premio Orden de Toledo', 'Elenco de Élite','Ganador'),
 ("2019", 'Premios Feroz', 'Mejor serie dramática', 'Serie Élite','Nominada'),
 ("2019", 'Premios Fotogramas de Plata', 'directores_guionistasdirectores_guionistasdirectoresguionistasdirectores_guionistasdirectores_guionistasdirectoresguionistasMejor serie española según los lectores', 'Serie Élite','Nominada'),
@@ -152,26 +151,35 @@ CREATE TABLE Directores_Guionistas (
 );
 
 insert into Directores_Guionistas (ID, Nombre,Rol,Temporadas_trabajadas) values
-('Ramón Salazar', 'Director', 'Temporadas 1-4'),
-('Dani de la Orden', 'Director', 'Temporadas 1-3'),
-('Carlos Montero', 'Guionista', 'Temporadas 1-4'),
-('Darío Madrona', 'Guionista', 'Temporadas 1-4');
+(1,'Ramón Salazar', 'Director', 'Temporadas 1-4'),
+(2,'Dani de la Orden', 'Director', 'Temporadas 1-3'),
+(3,'Carlos Montero', 'Guionista', 'Temporadas 1-4'),
+(4,'Darío Madrona', 'Guionista', 'Temporadas 1-4');
 
 
 
 CREATE TABLE IF NOT EXISTS bandas_sonoras (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    temporada INT,
+    id INT PRIMARY KEY,
+    temporada varchar(100),
     cancion VARCHAR(100),
     artista VARCHAR(100),
     fecha_creacion DATE,
     fecha_actualizacion DATE
 );
 
-INSERT INTO bandas_sonoras (temporada, cancion, artista, fecha_creacion, fecha_actualizacion) VALUES
-("1", 'Love My Way', 'The Psychedelic Furs', '2018-01-01', '2024-05-03'),
-("2", 'Vivir así es morir de amor', 'Camilo Sesto', '2018-01-01', '2024-05-03'),
-("3", 'Ring My Bell', 'Anita Ward', '2018-01-01', '2024-05-03'),
-("4", 'Champagne Supernova', 'Oasis', '2019-01-01', '2024-05-03'),
-("5", 'Im So Excited', 'The Pointer Sisters', '2019-01-01', '2024-05-03');
+INSERT INTO bandas_sonoras (id, temporada, cancion, artista, fecha_creacion, fecha_actualizacion) VALUES
+(1, "456", 'Love My Way', 'The Psychedelic Furs', '2018-01-01', '2024-05-03'),
+(2, "123456", 'Vivir así es morir de amor', 'Camilo Sesto', '2018-01-01', '2024-05-03'),
+(3, "8", 'Ring My Bell', 'Anita Ward', '2018-01-01', '2024-05-03'),
+(4, "1457", 'Champagne Supernova', 'Oasis', '2019-01-01', '2024-05-03'),
+(5, "246", 'Im So Excited', 'The Pointer Sisters', '2019-01-01', '2024-05-03');
+
+SELECT nombre, fecha_nacimiento
+FROM Actores;
+
+SELECT Nombre, Rol, Temporadas_trabajadas
+FROM Directores_Guionistas;
+
+SELECT nombre, fecha_estreno, numero_episodios
+FROM Temporadas;
 
