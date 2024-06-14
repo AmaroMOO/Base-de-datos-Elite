@@ -174,6 +174,66 @@ INSERT INTO bandas_sonoras (id, temporada, cancion, artista, fecha_creacion, fec
 (4, "1457", 'Champagne Supernova', 'Oasis', '2019-01-01', '2024-05-03'),
 (5, "246", 'Im So Excited', 'The Pointer Sisters', '2019-01-01', '2024-05-03');
 
+
+CREATE TABLE IF NOT EXISTS episodios_importantes (
+	episodio INT PRIMARY KEY,
+    temporada varchar(100),
+    evento_iconico varchar(100),
+    personajes_implicados varchar(100)
+);
+
+INSERT INTO episodios_importantes (episodio, temporada, evento_iconico, personajes_implicados) VALUES
+(1, 'Temporada 1', 'Descubrimiento del asesinato', 'Marina, Samuel, Guzmán'),
+(8, 'Temporada 1', 'Revelación del asesino', 'Nano, Marina, Polo'),
+(1, 'Temporada 2', 'Desaparición de Samuel', 'Samuel, Guzmán, Carla'),
+(8, 'Temporada 2', 'Confesión de Carla', 'Carla, Samuel, Guzmán'),
+(1, 'Temporada 3', 'Revelación del video', 'Lu, Valerio, Polo'),
+(8, 'Temporada 3', 'Muerte de Polo', 'Polo, Lu, Carla'),
+(1, 'Temporada 4', 'Introducción de nuevos personajes', 'Ari, Patrick, Mencía'),
+(8, 'Temporada 4', 'Incendio en la fiesta', 'Samuel, Guzmán, Ari'),
+(1, 'Temporada 5', 'Consecuencias del incendio', 'Samuel, Rebeka, Ari'),
+(8, 'Temporada 5', 'Muerte de Armando', 'Guzmán, Ari, Samuel');
+
+CREATE TABLE IF NOT EXISTS ubicaciones (
+	lugar INT PRIMARY KEY,
+    ubicaciones varchar(100),
+    temporada varchar(100), 
+    episodio varchar(100)
+);
+
+INSERT INTO ubicaciones (lugar, ubicaciones, temporada, episodio) VALUES
+(1, 'Colegio Las Encinas', 'Temporada 1', 'Episodio 1'),
+(2, 'Casa de Marina y Guzmán', 'Temporada 1', 'Episodio 1'),
+(3, 'Casa de Samuel', 'Temporada 1', 'Episodio 1'),
+(4, 'Discoteca', 'Temporada 1', 'Episodio 3'),
+(5, 'Casa de Carla', 'Temporada 1', 'Episodio 5'),
+(6, 'Casa de Polo', 'Temporada 1', 'Episodio 7'),
+(7, 'Club de golf', 'Temporada 2', 'Episodio 2'),
+(8, 'Casa de Nano', 'Temporada 2', 'Episodio 4'),
+(9, 'Casa de Lu', 'Temporada 2', 'Episodio 6'),
+(10, 'Escuela de padres', 'Temporada 3', 'Episodio 1'),
+(11, 'Centro Comercial', 'Temporada 3', 'Episodio 3'),
+(12, 'Apartamento de Cayetana', 'Temporada 3', 'Episodio 5'),
+(13, 'Casa de Ari, Patrick y Mencía', 'Temporada 4', 'Episodio 2'),
+(14, 'Fiesta en el lago', 'Temporada 4', 'Episodio 4'),
+(15, 'Almacén abandonado', 'Temporada 5', 'Episodio 3'),
+(16, 'Sala de estudios', 'Temporada 1', 'Episodio 2'),
+(17, 'Casa de Christian', 'Temporada 1', 'Episodio 4'),
+(18, 'Bar de copas', 'Temporada 1', 'Episodio 6'),
+(19, 'Casa de Nadia', 'Temporada 1', 'Episodio 8'),
+(20, 'Escuela de baile', 'Temporada 2', 'Episodio 1'),
+(21, 'Hotel de lujo', 'Temporada 2', 'Episodio 3'),
+(22, 'Estación de policía', 'Temporada 2', 'Episodio 5'),
+(23, 'Casa de Rebeca', 'Temporada 2', 'Episodio 7'),
+(24, 'Parque público', 'Temporada 3', 'Episodio 2'),
+(25, 'Estudio de fotografía', 'Temporada 3', 'Episodio 4'),
+(26, 'Cafetería universitaria', 'Temporada 3', 'Episodio 6'),
+(27, 'Casa de Valerio', 'Temporada 3', 'Episodio 8'),
+(28, 'Gimnasio', 'Temporada 4', 'Episodio 1'),
+(29, 'Apartamento de Omar', 'Temporada 4', 'Episodio 3'),
+(30, 'Piscina pública', 'Temporada 4', 'Episodio 5');
+
+
 SELECT nombre, fecha_nacimiento
 FROM Actores;
 
